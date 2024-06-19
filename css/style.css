@@ -1,0 +1,196 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}/* Reseteo todos los parametros por defecto del html*/
+body{
+    background-color: rgba(246, 181, 181, 0.246);
+}
+
+p {
+   color: red; 
+   }/*Esto le da color rojo a todos los parrafos*/
+
+header div
+ {
+    display: flex;/* Invoco Flex*/
+    flex-direction: row;/* Indico que seran filas*/
+    flex-wrap: wrap;/*para cuando se achique la pantalla, las filas pasan para abajo*/
+    justify-content: space-evenly;/*pongo las cosas de adentro a un buen espacio (divide los espacios en partes iguales) uno de cada uno en el medio*/
+    align-items: center;
+    background-color: brown;
+    border: 4px solid black;
+    margin: 3rem;
+    border-radius:10px;
+ }
+
+#a1{
+    font-size: 1.1rem;
+    background-color:rgba(0, 0, 0, 0.526);
+    margin: 20px;       
+    /*Le doy margen al bloque del parrafo*/
+    border-radius: 5px; 
+    /*le doy bordes redondeados al bloque*/
+    text-align:center;
+    /*centro el texto en el bloque*/
+    color:white 
+    /*le doy color a las letras */
+    }
+        /*acá busco la etiqueta id=a1 para que le aplique ciertas caracteristicas, esta etiqueta se encuentra en el index en la linea 52 de programacion, le aplicamos a este parrafp*/
+        
+nav{
+    margin: 40px;
+}   
+/* PROYECTOS AUDIOVISUALES*/     
+.titulos {
+    list-style: none;
+    width: 160px;/*ancho de la caja 200 pixeles*/
+    background-color: brown;/*color de fondo de la caja*/
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-left: 1rem;/*Margen izquierdo que le asigno al interior de la caja*/
+    margin-left: 1rem;/*Borde izquierdo que le doy a la caja*/
+    position: sticky;
+    left: 0;
+    top: 30px;
+}    /* Agarro con CSS el Id=titulos del videohtml*/    
+
+.principal{
+    background-color: beige;
+}
+h1{
+    font-size: 3rem;
+    background-color: brown;
+    padding: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 10px;
+    border-radius:10px;
+    border: 4px solid black;
+    display: flex;/* llama a las propiedades de flex para que funcione*/
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /*acomoda el contenido si la pagina se achica*/
+    }
+    /* Pregunta para el profesor: Porque el borde del H1 del indez donde dice artist: blas muro, no son redondeados, toman una forma rara. saludos */
+h3{
+    font-size: 2rem;
+    text-align: center;
+    text-decoration:underline;
+}
+p{
+    font-size: 2rem;
+    margin: 5px;
+    
+}
+.peli{ /*En pagina viedos.html en la linea de codigo 22 donde le doy a una lista la clase peli*/
+    list-style: none;
+    font-size: 2rem;
+    background-color: rgb(238, 213, 213);
+    text-align: justify;
+    text-decoration:none;
+    margin: 20px;
+    padding: 2rem;
+    background-image:url("../img/pngegg.png");
+    background-size: 15rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0.3rem solid black;/*Le pongo un ancho de borde, un borde solido y de color negro*/
+    border-radius: 0.5rem;
+    
+    
+}
+a{
+    color: black;
+    font-size: 1.5rem;
+}
+ul{
+    font-size: 1.3rem;
+}
+h5{
+    font-size: 1.5rem;
+    text-align: center;
+}
+/* APLICO GRID A LA PAGINA SOFTWARE.HTML*/
+.contenedor{
+    height: 80vh; /*le doy el 100% de view port*/
+    display: grid;
+    grid-template-areas:
+        "video   fcpx      fcpx"
+        "video   after     after"
+        "video   davinci   davinci" 
+        "video   insta     insta"
+        "audio   ableton   hys"
+        "audio   native    hys"
+        "audio   antares   antares";
+    grid-template-columns: 20% 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /*border: 1px solid black;*/
+    gap: .1rem; /*pngo espacio entre los elementos*/
+    list-style: none;
+    align-items: stretch;
+    padding: 1rem;
+
+    
+}
+.video{
+    display: grid;
+    place-items: center; /*coloco los items en el centro*/ 
+}
+.video{
+    grid-area: video; 
+    background-color: rgb(231, 196, 181);
+    
+     
+}
+.fcpx{
+    background-color: aquamarine;
+    grid-area: fcpx;
+    border: 2px solid black;
+}
+.after{
+    grid-area: after;
+    background-color: rgb(227, 255, 127);
+    border: 2px solid black;
+}
+.davinci{
+    grid-area: davinci;
+    background-color: beige;
+    border: 2px solid black;
+}
+.insta{
+    grid-area: insta;
+    background-color: blueviolet;
+    border: 2px solid black;
+}
+
+.audio{
+    grid-area: audio;
+    background-color: brown;
+    ;
+}
+.ableton{
+    grid-area: ableton;
+    background-color: rgb(142, 165, 42);
+    border: 2px solid black;
+}
+.native{
+    grid-area: native;
+    background-color: blanchedalmond;
+    border: 2px solid black;
+}
+.antares{
+    grid-area: antares;
+    background-color: aquamarine;
+    border: 2px solid black;
+}
+.hys{
+    grid-area: hys;
+    background-color: rgb(59, 48, 50);
+}
+.able{
+    max-width: 60%;
+    margin-left: 20%;
+}
+a:hover{/* hago que cuando pasa el mouse por arriba de cualquer etiqueta "a" se ponga la letra en negrita  */
+    font-weight: bold;
+}
